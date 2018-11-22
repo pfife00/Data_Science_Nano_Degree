@@ -14,7 +14,7 @@
 # <b>2. Data Understanding</b><br>
 #     The 2018 StackOverflow data was used to attempt to answer my questions of interest. 
 
-# In[121]:
+# In[140]:
 
 
 #Import Libraries
@@ -34,7 +34,7 @@ df = pd.read_csv('survey_results_public_2018.csv')  #read in data
 
 # <b>a) Read the database schema to find the meaning to each column and preview the database</b>
 
-# In[122]:
+# In[141]:
 
 
 #pd.set_option('display.max_columns', 200)
@@ -44,7 +44,7 @@ schema = pd.read_csv('survey_results_schema.csv')
 schema.head()
 
 
-# In[123]:
+# In[142]:
 
 
 #preview the data
@@ -52,7 +52,7 @@ pd.set_option('display.max_columns', 200)
 df.head()
 
 
-# In[124]:
+# In[143]:
 
 
 #show number of columns in dataframe
@@ -61,7 +61,7 @@ len(df.columns)
 
 # <b>b) Determine the type of data to look at. In this step, I looked at the different responses under the EmploymentStatus column</b>
 
-# In[125]:
+# In[144]:
 
 
 #determine the unique values in the EmploymentStatus Column
@@ -73,7 +73,7 @@ df['EmploymentStatus'].unique()
 # 
 # Next a new dataframe containing the CousinEducation column was extracted to answer Question 3. The data in the CousinEduction column consists of multiple entries and so it was necesary to separate each response into new columns. Duplicate columns were dropped. NaN's were converted to 0 so they would not be included in the analysis. The columns were then added and sorted.
 
-# In[126]:
+# In[145]:
 
 
 def clean_data(df):
@@ -141,7 +141,7 @@ def clean_data(df):
     return df, df_job_switch_counts_ext
 
 
-# In[127]:
+# In[146]:
 
 
 #Call function to clean data
@@ -153,7 +153,7 @@ df, df_job_switch_counts_ext = clean_data(df)
 
 # Create Plot Function
 
-# In[128]:
+# In[147]:
 
 
 def plot_function(df, plot_type, figure_size, title_text, xlim_val, x_val, rot_num):
@@ -185,7 +185,7 @@ def plot_function(df, plot_type, figure_size, title_text, xlim_val, x_val, rot_n
 
 # First create a function to find the number and percent of missing data per column. 
 
-# In[129]:
+# In[148]:
 
 
 def calc_missing(df):
@@ -218,28 +218,28 @@ def calc_missing(df):
 
 # Next, plot number of missing data to determine which if any data should be dropped
 
-# In[130]:
+# In[149]:
 
 
 #Call calc missing function to find number and percent of missing data per column
 percent_miss_col_sorted, df_missing_col, df_missing_row = calc_missing(df)
 
 
-# In[131]:
+# In[150]:
 
 
 #plot percent of missing data columns using plot 
 plot_function(percent_miss_col_sorted, 'bar', (20,10) , 'Percent Missing Data Per Column', None, None, 90);
 
 
-# In[132]:
+# In[151]:
 
 
 #plot number of missing data columns using plot
 plot_function(df_missing_col, 'bar', (20,10) , 'Total Missing Data Per Column', None, None, 90);
 
 
-# In[133]:
+# In[152]:
 
 
 #plot number of missing data rows using plot
@@ -248,7 +248,7 @@ plot_function(df_missing_row, 'bar', (20,10) , 'Total Missing Data Per Row', Non
 
 # Finally, create a function to drop the specified number of missing data per column and row 
 
-# In[136]:
+# In[153]:
 
 
 def clean_missing(df, max_number_nans, thresh_val):
@@ -272,7 +272,7 @@ def clean_missing(df, max_number_nans, thresh_val):
     return df
 
 
-# In[135]:
+# In[154]:
 
 
 #Based on the number of NaN's, keep on the columns which contain less than the number specified in max_number_of_nans
@@ -285,7 +285,7 @@ df = clean_missing(df, 15000, 50)
 # <b> a) Find number of unique vales per column and convert to percent</b>
 # Create a function to find the number of unique values and convert to percent
 
-# In[9]:
+# In[155]:
 
 
 def count_values_to_percent(df, column_name):
@@ -309,7 +309,7 @@ def count_values_to_percent(df, column_name):
 # <b> b) Use function</b>
 # Use function to find percents
 
-# In[ ]:
+# In[156]:
 
 
 #Call function to get percent dataframe for Question 1
@@ -324,7 +324,7 @@ df_undergrad_major_percent = count_values_to_percent(df, 'MajorUndergrad')
 
 # <b>Question 1:</b> How many years of coding do people who have a full-time coding job typically have?
 
-# In[11]:
+# In[157]:
 
 
 #Plot Years Programming using plot function
@@ -333,7 +333,7 @@ plot_function(df_yrs_prog_percent, 'bar', (20,10) , 'Percent Years Programming f
 
 # <b>Question 2:</b> Which undergraduate degree do people who have a full-time coding job typically have?
 
-# In[13]:
+# In[158]:
 
 
 #Plot Undergrad responses using plot function
@@ -342,7 +342,7 @@ plot_function(df_undergrad_major_percent, 'bar', (20,10) , 'Percent of Undergrad
 
 # <b>Question 3:</b> What methods do employed developers recommend to switch to a career as a developer?
 
-# In[14]:
+# In[159]:
 
 
 #show schema result for the CousinEducation column since the column name is a little confusing to me
@@ -350,7 +350,7 @@ schema_cous = schema['Column'] == 'CousinEducation'
 schema[schema_cous]
 
 
-# In[15]:
+# In[160]:
 
 
 #Plot developer recommendations using plot function
@@ -359,7 +359,7 @@ plot_function(df_job_switch_counts_ext, 'bar', (20,10), 'Number of Recommendatio
 
 # <b>Question 4:</b> What other aspects correlate well to those who have a full-time coding job typically have?
 
-# In[16]:
+# In[161]:
 
 
 #Generate correlation matrix
@@ -367,14 +367,14 @@ corr_df = df.corr()
 corr_df
 
 
-# In[17]:
+# In[162]:
 
 
 #plot heat map
 sns.heatmap(corr_df);
 
 
-# In[18]:
+# In[163]:
 
 
 #generate horizontal bar plot to show correlations
