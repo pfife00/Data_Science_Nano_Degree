@@ -41,7 +41,7 @@ df = pd.read_csv('survey_results_public_2018.csv')  #read in data
 pd.set_option('display.max_rows', 200)
 pd.set_option('display.max_colwidth', -1)
 schema = pd.read_csv('survey_results_schema.csv')
-schema.head(n=200)
+schema.head()
 
 
 # In[123]:
@@ -49,7 +49,7 @@ schema.head(n=200)
 
 #preview the data
 pd.set_option('display.max_columns', 200)
-df.head(n=200)
+df.head()
 
 
 # In[124]:
