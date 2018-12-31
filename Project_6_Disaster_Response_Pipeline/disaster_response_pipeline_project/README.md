@@ -49,15 +49,21 @@ The files required to run the app are organized as followed:
 
 </ul>
 
-### Instructions:
-1. Run the following commands in the project's root directory to set up your database and model.
+<h3> Instructions to Run the App </h3>
+
+<ol>
+  <li> Run the following commands in the project's root directory to set up your database and model. </li>
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
     - To run ML pipeline that trains classifier and saves
         `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
 
-2. Run the following command in the app's directory to run your web app.
+  <li> Run the following command in the app's directory to run your web app. </li>
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+  <li> Go to http://0.0.0.0:3001/ <li>
+</ol>
+
+<h3> Licensing, Authors, Acknowledgments </h3>
+Credit should be given to <a target="_blank" href="https://www.figure-eight.com/">Figure Eight </a> for the data. You can find the licensing for the data and other descriptive information at the Figure Eight link provided above. The template code provided for the app (run.py), data processing (process_data.py), and training (train_classifier.py) were obtained from Udacity Data Science Nano Degree Project: Disaster Response Pipeline Project.
