@@ -25,10 +25,11 @@ The files required to run the app are organized as followed:
     <ul>
       <li> template folder - contains master.html file which is main page of app webpage
       and go.html which is the classification result page of app </li>
-
       <li> run.py - Flask file which loads pickle file and runs app </li>
     </ul>
+</ul>
 
+<ul>
   <li> data folder </li>
     <ul>
       <li> disaster_categories.csv - categories data </li>
@@ -36,6 +37,7 @@ The files required to run the app are organized as followed:
       <li> process_data.py - process and save data to SQL Database </li>
       <li> InsertDatabaseName.db - database to save data too </li>
     </ul>
+</ul>
 
   <li> models folder </li>
     <ul>
