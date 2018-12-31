@@ -62,7 +62,7 @@ The files required to run the app are organized as followed:
   <li> Run the following command in the app's directory to run your web app. </li>
     `python run.py`
 
-  <li> Go to http://0.0.0.0:3001/ <li>
+  <li> Go to http://0.0.0.0:3001/ </li>
 </ol>
 
 <h3> Licensing, Authors, Acknowledgments </h3>
