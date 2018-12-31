@@ -1,4 +1,18 @@
-# Disaster Response Pipeline Project
+<h1> Disaster Response Pipeline Project </h1>
+<h3> Installation </h3>
+The project requires <b> Python 3.x </b> and the following Python libraries installed:
+<ul>
+  <li> <a href="http://www.numpy.org/" rel="nofollow">NumPy</a> </li>
+  <li> <a href="http://pandas.pydata.org" rel="nofollow">Pandas</a> </li>
+  <li> <a href="https://www.nltk.org/" rel="nofollow">Natural Language Toolkit </a> </li>
+  <li> <a href="https://www.nltk.org/" rel="nofollow">Natural Language Toolkit </a> </li>
+  <li> <a href="https://docs.python.org/2/library/pickle.html" rel="nofollow">pickle </a> </li>
+
+  
+</ul>
+
+<h3> Project Description </h3>
+
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
