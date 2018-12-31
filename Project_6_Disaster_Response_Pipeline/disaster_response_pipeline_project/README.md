@@ -39,6 +39,7 @@ The files required to run the app are organized as followed:
     </ul>
 </ul>
 
+<ul>
   <li> models folder </li>
     <ul>
       <li> train_classifier.py - create prediction pipleline with processed data created
