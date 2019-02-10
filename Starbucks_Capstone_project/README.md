@@ -13,6 +13,9 @@ The project requires <b> Python 3.x </b> and the following Python libraries inst
   <li> <a href="https://scikit-learn.org/stable/" rel="nofollow">scikit-learn </a> </li>
   <li> <a href="https://lightgbm.readthedocs.io/en/latest/#" rel="nofollow">LightGBM</a> </li>
 
+Seaborn version 0.9.0 must be intalled by typing the following command into terminal: pip3 install seaborn==0.9.0
+LightGBM must be installed for Python by typing the following command into terminal: conda install -c conda-forge lightgbm
+
 </ul>
 
 <h3> Project Motivation </h3>
