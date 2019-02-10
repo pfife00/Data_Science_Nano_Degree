@@ -18,8 +18,6 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelBinarizer, MultiLabelBinarizer
-import re
-import progressbar
 
 
 def convert_to_datetime(elem):

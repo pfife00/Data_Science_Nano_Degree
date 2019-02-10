@@ -5,20 +5,8 @@
 #References
 #
 #Udacity Data Science NanoDegree
-#Project: Finding Donors for CharityML workspace
 #visuals.py
 
-
-###########################################
-# Suppress matplotlib user warnings
-# Necessary for newer version of matplotlib
-#import warnings
-#warnings.filterwarnings("ignore", category = UserWarning, module = "matplotlib")
-#
-# Display inline matplotlib plots with IPython
-#from IPython import get_ipython
-#get_ipython().run_line_magic('matplotlib', 'inline')
-###########################################
 
 import matplotlib.patches as mpatches
 import numpy as np
@@ -39,7 +27,7 @@ def plot_gender_income_distribution(df):
 
     #store values from M column that equal one to male_costomers dataframe
     male_customers = df[df['M'] == 1]
-    
+
     #store values from F column that equal one to female_costomers dataframe
     female_customers = df[df['F'] == 1]
 
